@@ -1,0 +1,9 @@
+
+== Publishing Message from Files Using  CLI
+
+    gcloud pubsub topics publish demo_topic  --message "$(cat input.txt| jq -c)"
+
+
+===
+  cat input.txt|jq -c
+    {"type":"File-Incremental","data":{"name":"Ashutosh","last_name":"Ojha","age":28,"DOB":1994,"height":5.8}}
